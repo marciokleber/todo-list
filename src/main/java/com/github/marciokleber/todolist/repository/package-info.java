@@ -9,4 +9,4 @@
  * @author marciokjls
  * @since 1.0
  */
-package com.gitlab.marciokjls.todolist.repository;
+package com.github.marciokleber.todolist.repository;

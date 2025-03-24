@@ -1,4 +1,4 @@
-package com.gitlab.marciokjls.todolist;
+package com.github.marciokleber.todolist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

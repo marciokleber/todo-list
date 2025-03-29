@@ -6,7 +6,7 @@
  * Essas classes representam as tabelas do banco de dados e são anotadas com <strong><em>@Entity</em></strong> para mapeamento ORM.
  * </p>
  *
- * @author marciokjls
+ * @author marciokleber
  * @since 1.0
  */
 package com.github.marciokleber.todolist.domain;

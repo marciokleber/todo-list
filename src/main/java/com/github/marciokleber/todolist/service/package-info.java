@@ -6,7 +6,7 @@
  * Classes que implementam as regras de negócio, anotadas com <strong><em>@Service</em></strong>.
  * </p>
  *
- * @author marciokjls
+ * @author marciokleber
  * @since 1.0
  */
 package com.github.marciokleber.todolist.service;

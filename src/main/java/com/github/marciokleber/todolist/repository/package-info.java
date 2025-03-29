@@ -6,7 +6,7 @@
  * Repositórios que interagem com o banco de dados.
  * </p>
  *
- * @author marciokjls
+ * @author marciokleber
  * @since 1.0
  */
 package com.github.marciokleber.todolist.repository;

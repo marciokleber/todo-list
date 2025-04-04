@@ -42,3 +42,23 @@
 >```shell 
 >  curl -X GET http://localhost:8080/todolist/categoria/1 | jq
 >```
+
+
+>
+>### Build GraalVm
+>```shell 
+>sdk use java 17.0.12-graal
+>```
+>```shell 
+>sudo apt-get install build-essential libz-devzlib1g-dev
+>```
+>```shell 
+>mvn clean package -Pnative
+>```
+>```shell 
+>mvn -Pnative native:compile
+>```
+>
+
+
+

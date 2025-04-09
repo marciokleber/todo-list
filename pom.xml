@@ -86,6 +86,8 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}-${project.version}-${git.commit.id.abbrev}</finalName>
+
         <plugins>
             <!-- PLUGIN NATIVE MAVEN -->
             <plugin>
@@ -93,6 +95,32 @@
                 <artifactId>native-maven-plugin</artifactId>
             </plugin>
 
+            <!-- PLUGIN GIT COMMIT ID -->
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <version>4.9.10</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <failOnNoGitDirectory>false</failOnNoGitDirectory>
+                    <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
+                    <generateGitPropertiesFile>true</generateGitPropertiesFile>
+                    <includeOnlyProperties>
+                        <includeOnlyProperty>^git.commit.id.abbrev$</includeOnlyProperty>
+                        <includeOnlyProperty>^git.commit.id.describe$</includeOnlyProperty>
+                        <includeOnlyProperty>^git.branch$</includeOnlyProperty>
+                    </includeOnlyProperties>
+                </configuration>
+            </plugin>
+
+            <!-- PLUGIN SPRINGBOOT MAVEN -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -111,6 +139,25 @@
                     </image>
                 </configuration>
             </plugin>
+
+            <!-- PLUGIN DOCKER -->
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.40.2</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>${project.artifactId}:${project.version}.${git.commit.id.abbrev}</name>
+                            <build>
+                                <contextDir>${project.basedir}</contextDir>
+                                <dockerFile>Dockerfile</dockerFile>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

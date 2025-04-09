@@ -1,0 +1,282 @@
+type: collection.insomnia.rest/5.0
+name: todo-list
+meta:
+  id: wrk_f288260badd54aedaefd7ae5536400e3
+  created: 1743802241435
+  modified: 1743802241435
+collection:
+  - name: Categoria
+    meta:
+      id: fld_ed39728ba1ee407582e345a6f3202c0e
+      created: 1743802490465
+      modified: 1743803123812
+      sortKey: -1743802490465
+    children:
+      - url: http://localhost:8080/todolist/categoria
+        name: findAll
+        meta:
+          id: req_19010ffb2c874523be71c337b94e663d
+          created: 1743802516782
+          modified: 1743802605192
+          isPrivate: false
+          sortKey: -1743802516782
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/categoria/1
+        name: delete
+        meta:
+          id: req_ea71652df0514c65996148ab779a7559
+          created: 1743802686170
+          modified: 1743802688899
+          isPrivate: false
+          sortKey: -1743802460981.25
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/categoria
+        name: create
+        meta:
+          id: req_f78bc27168254637a43e1e1ce0fe2c1e
+          created: 1743802702194
+          modified: 1743802881205
+          isPrivate: false
+          sortKey: -1743802498181.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Trabalho",
+            	"descricao": "Tarefas referente ao trabalho corporativo"
+            	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_df59c620086c46339484dc7a76237a99
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/categoria/11
+        name: update
+        meta:
+          id: req_67869f8ba5e74c94b0c3c1697273e3a5
+          created: 1743803160418
+          modified: 1743803160418
+          isPrivate: false
+          sortKey: -1743802484231.5625
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Trabalho",
+            	"descricao": "Tarefas referente ao trabalho."
+            	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_df59c620086c46339484dc7a76237a99
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/categoria/11
+        name: findById
+        meta:
+          id: req_7572b2ce72e34b618fb98bbe1687824f
+          created: 1743803183242
+          modified: 1743803237584
+          isPrivate: false
+          sortKey: -1743802507481.875
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tarefa
+    meta:
+      id: fld_71b0907026354e88965feacdf36b23a5
+      created: 1743802512069
+      modified: 1743802512069
+      sortKey: -1743802512069
+    children:
+      - url: http://localhost:8080/todolist/tarefa/1
+        name: findById
+        meta:
+          id: req_efc1acb76ae448879ff291561e16b006
+          created: 1743802624679
+          modified: 1743803266906
+          isPrivate: false
+          sortKey: -1743803147573
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/tarefa/1
+        name: update
+        meta:
+          id: req_fcd4e8670d464caa89c6018c686dcd4b
+          created: 1743802940137
+          modified: 1743803665483
+          isPrivate: false
+          sortKey: -1743803147498
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"titulo": "criar um crud completo de uma to-do",
+            	"descricao": "Tarefas referente ao trabalho corporativo",
+            	"isCompleta": 1,
+            	"categoria_id": 11
+            	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_df59c620086c46339484dc7a76237a99
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/tarefa
+        name: findAll
+        meta:
+          id: req_849821c0fe8641ddb032011241e4a200
+          created: 1743803137921
+          modified: 1743803268502
+          isPrivate: false
+          sortKey: -1743803147673
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/tarefa
+        name: create
+        meta:
+          id: req_52017a2c69f446279b03d8016c54fb59
+          created: 1743803151322
+          modified: 1743897200518
+          isPrivate: false
+          sortKey: -1743803147523
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"titulo": "criar um crud completo de uma todo-list",
+            	"descricao": "Tarefas referente ao trabalho corporativo",
+            	"isCompleta": 1,
+            	"categoriaId": 11
+            	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_df59c620086c46339484dc7a76237a99
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/todolist/tarefa/1
+        name: delete
+        meta:
+          id: req_cd029c878a37483db9418d6f66500968
+          created: 1743803168228
+          modified: 1743803280978
+          isPrivate: false
+          sortKey: -1743803147473
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a0d1b557b0447bbef8c6acc4586dcbe5b255f173
+    created: 1743802241436
+    modified: 1743802241436
+environments:
+  name: Base Environment
+  meta:
+    id: env_a0d1b557b0447bbef8c6acc4586dcbe5b255f173
+    created: 1743802241436
+    modified: 1743802241436
+    isPrivate: false

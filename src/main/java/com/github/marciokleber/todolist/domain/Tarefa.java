@@ -1,7 +1,6 @@
 package com.github.marciokleber.todolist.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Comment;
@@ -40,4 +39,7 @@ public class Tarefa {
     @Comments(@Comment("CAMPO DESCRITOR DA DATA DE ULTIMA ATUALIZAÇÃO DA TAREFA"))
     private LocalDateTime updated_at;
 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
 }
